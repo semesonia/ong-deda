@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        secondary: '#FFA500',
+                        primary: '#0c6051'
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        * {
+            font-family: Roboto, sans-serif;
+        }
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+        }
+    </style>
+    <title>ONG DEDA</title>
+</head>
+<body>
+    <header id="header" class="fixed w-full bg-primary z-50">
+        <div class="mx-auto max-w-7xl h-16 flex justify-between items-center py-10">
+            <div id="logo" class="font-bold text-3xl text-white">
+                ONG <span class="text-secondary">DEDA</span>
+            </div>
+            <nav>
+                <ul class="flex gap-12 items-center">
+                    <li class="border-b-4 border-secondary pb-1 hover:border-secondary transition-colors duration-500">
+                        <a href="#" class="text-gray-200 hover:text-gray-300 font-medium">Accueil</a>
+                    </li>
+                    <li  class="border-b-4 border-transparent pb-1 hover:border-secondary transition-colors duration-500">
+                        <a href="#" class="text-gray-200 hover:text-gray-300 font-medium">A propos</a>
+                    </li>
+                    <li  class="border-b-4 border-transparent pb-1 hover:border-secondary transition-colors duration-500">
+                        <a href="#" class="text-gray-200 hover:text-gray-300 font-medium">Explorer DEDA</a>
+                    </li>
+                    <li  class="border-b-4 border-transparent pb-1 hover:border-secondary transition-colors duration-500">
+                        <a href="#" class="text-gray-200 hover:text-gray-300 font-medium">Nous rejoindre</a>
+                    </li>
+                    <li  class="border-b-4 border-transparent pb-1 hover:border-secondary transition-colors duration-500">
+                        <a href="#" class="text-gray-200 hover:text-gray-300 font-medium">Notre blog</a>
+                    </li>
+                    <li>
+                        <a href="#" id="cta" class="bg-secondary text-primary py-2 px-5 hover:text-white transition-colors duration-500 flex items-center gap-3">
+                            Nous contacter
+                            <i class="fa fa-phone"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main id="main">
+        <section id="hero-section" class="bg-primary lg:h-[800px]">
+            <div class="lg:flex mx-auto max-w-7xl pt-20 gap-4">
+                <div class="flex-1 flex flex-col gap-12 justify-center pt-20">
+                    <h1 class="text-[65px] font-[900] leading-[80px] text-white font-bold">
+                        <span class="underline underline-offset-4 decoration-secondary">Promouvoir</span> un Développement Durable pour l'Afrique
+                    </h1>
+                    <p class="text-white">
+                        DEDA, une organisation non gouvernementale dédiée à l'avancement du développement durable en Afrique. 
+                        Nous sommes engagés à créer un avenir prospère pour le continent en favorisant des solutions durables, 
+                        équitables et respectueuses de l'environnement.
+                    </p>
+                    <div class="flex gap-6">
+                        <a href="#" class="bg-secondary text-primary py-3 px-5 hover:text-white transition-colors duration-500">
+                            En savoir plus
+                        </a>
+                        <a href="#" class="text-white py-2 px-5 hover:text-white transition-colors duration-500 gap-4 inline-flex items-center relative">
+                            <span class="h-10 w-10 rounded-full border-2 flex items-center justify-center absolute -ml-2">
+                                <i class="fa fa-play text-sm ml-1"></i>
+                            </span>
+                            <span class="h-6 w-6 rounded-full border-2 flex items-center justify-center animate-ping">
+                                <i class="fa fa-play text-xs ml-1"></i>
+                            </span>
+                            Lancer a vidéo
+                        </a>
+                    </div>
+                </div>
+                <div class="lg:h-[600px] lg:w-[600px] rounded-full bg-black/50 overflow-hidden relative">
+                    <img class="h-full w-full object-cover" src="./ODD-Gabon.jpg" alt="">
+                    <div class="absolute top-0 flex items-center justify-center w-full h-full bg-black/50">
+                        <div class="lg:h-[500px] lg:w-[500px] rounded-full overflow-hidden relative">
+                            <img class="h-full w-full object-cover" src="./ODD-Gabon.jpg" alt="">
+                            <div class="absolute top-0 w-full h-full bg-black/20"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="partners" class="max-w-7xl bg-white p-10 shadow-lg rounded -mt-24 mx-auto">
+            <h2 class="text-center text-lg">Trusted by <span class="text-secondary">500+</span> nonprofits accross <span class="text-secondary">6+</span> countries</h2>
+            <div class="grid grid-cols-6 gap-6 mt-6">
+                <div class="h-20">
+                    <img src="./webtinix-logo.png" alt="" class="mx-auto h-full object-contain">
+                </div>
+                <div class="h-20">
+                    <img src="./webtinix-logo.png" alt="" class="mx-auto h-full object-contain">
+                </div>
+                <div class="h-20">
+                    <img src="./webtinix-logo.png" alt="" class="mx-auto h-full object-contain">
+                </div>
+                <div class="h-20">
+                    <img src="./webtinix-logo.png" alt="" class="mx-auto h-full object-contain">
+                </div>
+                <div class="h-20">
+                    <img src="./webtinix-logo.png" alt="" class="mx-auto h-full object-contain">
+                </div>
+                <div class="h-20">
+                    <img src="./webtinix-logo.png" alt="" class="mx-auto h-full object-contain">
+                </div>
+            </div>
+        </section>
+        <section id="about" class="max-w-7xl mx-auto pt-20">
+            <div class="grid grid-cols-2 gap-12">
+                <div class="flex flex-col justify-center">
+                    <span class="text-primary text-lg">A propos de nous</span>
+                    <h2 class="text-[65px] font-[900] leading-[80px] font-bold mb-4">
+                        Nous l'avons fait avec votre <span class="underline underline-offset-4 decoration-secondary">aide !</span>
+                    </h2>
+                    <p class="my-3">
+                        DEDA (Développement durable pour Afrique) est une ONG panafricaine qui œuvre pour la promotion et la réalisation du développement durable sur le continent. Notre organisation rassemble des experts, des militants et des partenaires engagés dans différents domaines liés au développement durable
+                    </p>
+                    <p class="my-3">
+                        Nous travaillons en étroite collaboration avec les communautés locales, les gouvernements, les entreprises et les organisations internationales pour identifier les défis, développer des solutions innovantes et mettre en œuvre des projets concrets qui favorisent la croissance économique, la protection de l'environnement et le bien-être social en Afrique.
+                    </p>
+                    <div class="mt-8">
+                        <a href="#" class="bg-secondary text-primary py-3 px-5 hover:text-white transition-colors duration-500">
+                            En savoir plus
+                        </a>
+                    </div>
+                </div>
+                <div class="absolute right-0 w-[800px] px-2">
+                    <div class="relative w-full h-[650px]">
+                        <div class="absolute h-96 w-96 left-[17%]">
+                            <img class="h-full w-full object-cover" src="./Operation-Un-environnement-propre-pour-un-developpement-durable-organisee-par-lassociation-Les-Amis-du-Futur-Mars-2023-2.jpg" alt="">
+                        </div>
+                        <div class="absolute h-[250px] w-[250px] top-[40%] ml-12 border-8 border-white">
+                            <img class="h-full w-full object-cover" src="./ODD-Gabon.jpg" alt="">
+                        </div>
+                        <div class="absolute h-[250px] w-[250px] right-0">
+                            <img class="h-full w-full object-cover" src="./terre.jpg" alt="">
+                        </div>
+                        <div class="absolute h-[250px] w-[250px] bottom-0 border-8 border-white left-[40%]">
+                            <img class="h-full w-full object-cover" src="./crise-Covid-19-Afrique-Ouest-centrale.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="services" class="max-w-7xl mx-auto pt-20">
+            <h2 class="text-[65px] font-[900] leading-[80px] font-bold mb-4">
+                Les <span class="underline underline-offset-4 decoration-secondary">Services</span> <br> Que nous offrons !
+            </h2>
+            <div class="grid grid-cols-3 gap-4 mt-8">
+                <div class="bg-primary p-6 group hover:bg-primary transition-colors duration-500 cursor-pointer">
+                    <div class="bg-secondary h-16 w-16 flex items-center justify-center">
+                       <i class="fa-solid fa-dumpster-fire text-2xl"></i>
+                    </div>
+                    <h3 class="text-white text-2xl font-medium my-4">Gestion des Déchets</h3>
+                    <p class="text-gray-300">
+                        Nous proposons des solutions complètes pour la gestion responsable des déchets, en mettant l'accent sur la réduction, le recyclage et l'élimination appropriée des déchets.
+                    </p>
+                </div>
+                <div class="p-6 group hover:bg-primary transition-colors duration-500 cursor-pointer">
+                    <div class="bg-gray-200 h-16 w-16 flex items-center justify-center group-hover:bg-secondary transition-colors duration-500">
+                        <i class="fa-solid fa-bacon text-2xl"></i>
+                    </div>
+                    <h3 class="text-gray-800 text-2xl font-medium my-4 group-hover:text-white transition-colors duration-500">Gestion des Érosions</h3>
+                    <p class="text-gray-600 group-hover:text-gray-300 transition-colors duration-500">
+                        Nous sommes spécialisés dans la gestion des érosions, en travaillant pour prévenir l'érosion des sols, restaurer les écosystèmes fragiles et protéger les zones à risque.
+                    </p>
+                </div>
+                <div class="p-6 group hover:bg-primary transition-colors duration-500 cursor-pointer">
+                    <div class="bg-gray-200 h-16 w-16 flex items-center justify-center group-hover:bg-secondary transition-colors duration-500">
+                       <i class="fa-brands fa-resolving text-2xl"></i>
+                    </div>
+                    <h3 class="text-gray-800 text-2xl font-medium my-4 group-hover:text-white transition-colors duration-500">Amélioration des Conditions de Vie</h3>
+                    <p class="text-gray-600 group-hover:text-gray-300 transition-colors duration-500">
+                        Nous nous engageons à améliorer les conditions de vie des communautés en mettant en place des programmes de développement durable, visant à renforcer la résilience et à créer des opportunités économiques durables.
+                    </p>
+                </div>
+                <div class="p-6 group hover:bg-primary transition-colors duration-500 cursor-pointer">
+                    <div class="bg-gray-200 h-16 w-16 flex items-center justify-center group-hover:bg-secondary transition-colors duration-500">
+                        <i class="fa-solid fa-business-time text-2xl"></i>
+                    </div>
+                    <h3 class="text-gray-800 text-2xl font-medium my-4 group-hover:text-white transition-colors duration-500">Formation et Incubation d'Entreprises</h3>
+                    <p class="text-gray-600 group-hover:text-gray-300 transition-colors duration-500">
+                        Nous formons et accompagnons les entrepreneurs locaux pour développer leurs idées commerciales et créer des emplois durables.
+                    </p>
+                </div>
+                <div class="p-6 group hover:bg-primary transition-colors duration-500 cursor-pointer">
+                    <div class="bg-gray-200 h-16 w-16 flex items-center justify-center group-hover:bg-secondary transition-colors duration-500">
+                        <i class="fa-solid fa-ranking-star text-2xl"></i>
+                    </div>
+                    <h3 class="text-gray-800 text-2xl font-medium my-4 group-hover:text-white transition-colors duration-500">Artisanat et Commerce Équitable</h3>
+                    <p class="text-gray-600 group-hover:text-gray-300 transition-colors duration-500">
+                        Nous soutenons les artisans locaux en promouvant le commerce équitable et en facilitant leur accès aux marchés nationaux et internationaux.
+                    </p>
+                </div>
+                <div class="p-6 group hover:bg-primary transition-colors duration-500 cursor-pointer">
+                    <div class="bg-gray-200 h-16 w-16 flex items-center justify-center group-hover:bg-secondary transition-colors duration-500">
+                        <i class="fa-solid fa-building-wheat text-2xl"></i>
+                    </div>
+                    <h3 class="text-gray-800 text-2xl font-medium my-4 group-hover:text-white transition-colors duration-500">Projets Agricoles Durables</h3>
+                    <p class="text-gray-600 group-hover:text-gray-300 transition-colors duration-500">
+                        Nous développons des projets agricoles durables en travaillant avec les communautés locales, en favorisant des pratiques agricoles respectueuses de l'environnement.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section id="events" class="bg-primary mt-20">
+            <div class="max-w-7xl mx-auto py-20">
+                <div class="flex justify-between items-end">
+                    <h2 class="text-[65px] text-white font-[900] leading-[80px] font-bold mb-4">
+                        Nos <span class="underline underline-offset-4 decoration-secondary"> événements exclusifs</span> <br> nous sommes toujours providentiels
+                    </h2>
+                    <div class="flex gap-4 mb-6">
+                        <button class="w-12 h-10 border flex items-center justify-center">
+                            <i class="fa fa-angle-left text-white text-2xl"></i>
+                        </button>
+                        <button class="w-12 h-10 border flex items-center justify-center">
+                            <i class="fa fa-angle-right text-white text-2xl"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="h-96 mt-6">
+                    <img class="h-full w-full object-cover" src="./ODD-Gabon.jpg" alt="">
+                </div>
+                <div class="grid grid-cols-3">
+                    <div class="mt-4 col-span-2">
+                        <h3 class="text-white text-4xl font-bold">Fausses pistes pour des campagnes spécifiques</h3>
+                        <p class="text-gray-200 my-3">
+                            Nous croyons en l'importance de sensibiliser et de mobiliser les communautés autour des enjeux cruciaux du développement durable. Pour susciter l'intérêt et encourager la participation, nous avons développé des campagnes spécifiques axées sur des "Fausses Découvertes". Ces campagnes créatives visent à stimuler la réflexion, à susciter la curiosité et à engager les individus dans la recherche de solutions.
+                        </p>
+                        <div class="mt-3">
+                            <a href="#" class="text-secondary hover:text-white transition-colors duration-500">
+                                En savoir plus
+                            </a>
+                        </div>
+                    </div>
+                    <div class="flex justify-end">
+                        <span class="text-white font-bold text-9xl">01</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="blog" class="max-w-7xl mx-auto pt-20">
+            <h2 class="text-[65px] font-[900] leading-[80px] font-bold mb-4">
+                <span class="underline underline-offset-4 decoration-secondary">Histoires inspirantes</span> de ceux <br>
+                que nous avons déjà aidées.            
+            </h2>
+            <div class="grid grid-cols-3 gap-8 mt-12">
+                <div class="">
+                    <div class="h-72">
+                        <img class="h-full w-full object-cover" src="./group-african-medical-students.jpg" alt="">
+                    </div>
+                    <h3 class="text-3xl my-4 font-medium">Aïcha</h3>
+                    <h4 class="mb-4 text-xl">De la décharge à la dignité</h4>
+                    <p>Aïcha, une jeune femme courageuse, vivait dans des conditions précaires dans une décharge. Grâce à notre programme de gestion des déchets, elle a été formée et employée dans notre centre de tri, où elle a pu trouver un emploi stable et une vie meilleure.</p>
+                    <div class="mt-3">
+                        <a href="#" class="text-primary">En savoir plus</a>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="h-72">
+                        <img class="h-full w-full object-cover" src="./group-african-medical-students.jpg" alt="">
+                    </div>
+                    <h3 class="text-3xl my-4 font-medium">Aïcha</h3>
+                    <h4 class="mb-4 text-xl">De la décharge à la dignité</h4>
+                    <p>Aïcha, une jeune femme courageuse, vivait dans des conditions précaires dans une décharge. Grâce à notre programme de gestion des déchets, elle a été formée et employée dans notre centre de tri, où elle a pu trouver un emploi stable et une vie meilleure.</p>
+                    <div class="mt-3">
+                        <a href="#" class="text-primary">En savoir plus</a>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="h-72">
+                        <img class="h-full w-full object-cover" src="./group-african-medical-students.jpg" alt="">
+                    </div>
+                    <h3 class="text-3xl my-4 font-medium">Aïcha</h3>
+                    <h4 class="mb-4 text-xl">De la décharge à la dignité</h4>
+                    <p>Aïcha, une jeune femme courageuse, vivait dans des conditions précaires dans une décharge. Grâce à notre programme de gestion des déchets, elle a été formée et employée dans notre centre de tri, où elle a pu trouver un emploi stable et une vie meilleure.</p>
+                    <div class="mt-3">
+                        <a href="#" class="text-primary">En savoir plus</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="cta" class="mt-20 h-[600px] bg-primary overflow-hidden relative">
+            <div class="absolute h-full right-0 top-0 w-[60%]">
+                <img class="h-full w-full object-cover" src="./group-african-medical-students.jpg" alt="">
+            </div>
+            <div class="relative h-full w-full max-w-7xl mx-auto">
+                <div class="w-[48%] bg-primary h-full absolute top-0"></div>
+                <div class="absolute top-0 bg-primary w-[55%] h-full rounded-tr-[70px] rounded-br-[80px] transform -rotate-[10deg] mt-[42px]"></div>
+                
+                <div class="absolute top-0 max-w-7xl h-full left-0 right-0 mx-auto grid grid-cols-2">
+                    <div class="h-full flex flex-col py-10 justify-center pr-24">
+                        <div class="text-white text-3xl font-bold mb-6">
+                            ONG <span class="text-secondary">DEDA</span>
+                        </div>
+                        <h2 class="text-[65px] text-white font-[900] leading-[80px] font-bold mb-4">
+                            La façon dont <br> vous <span class="underline underline-offset-4 decoration-secondary">aidez-nous !</span>
+                        </h2>
+                        <p class="text-white">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quia vel quasi repellendus. Ab voluptatum facere a. Aliquid eos molestiae asperiores nulla quas vel quos voluptate velit laboriosam. Qui, soluta.
+                        </p>
+                        <div class="mt-8">
+                            <a href="#" class="bg-secondary text-primary py-3 px-5 hover:text-white transition-colors duration-500">
+                                Nous rejoindre
+                            </a>
+                        </div>
+                    </div>
+                    <div class="absolute top-1/2 left-1/2 m-auto inset-x-0 inset-y-0 -mt-16">
+                        <div class="h-32 w-32 rounded-full bg-white/20 flex items-center justify-center cursor-pointer relative">
+                            <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center absolute">
+                                <i class="fa fa-play text-2xl text-white ml-1"></i>
+                            </div>
+                            <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center animate-ping">
+                                <i class="fa fa-play text-2xl text-white ml-1"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="footer" class="mt-20 bg-gray-200">
+        <div class="pb-8 max-w-7xl mx-auto">
+            <div class="grid grid-cols-12 gap-8 py-16">
+                <div class="col-span-4">
+                    <div class="font-bold text-3xl text-secondary mb-4">
+                        ONG <span class="text-primary">DEDA</span>
+                    </div>
+                    <p class="leading-[30px]">
+                        Développement durable en Afrique (DEDA) - Notre ONG s'engage pour un avenir durable en Afrique, en offrant des solutions innovantes dans la gestion des déchets, la lutte contre l'érosion et l'amélioration des conditions de vie. Ensemble, nous créons un impact positif pour les communautés et la planète. Rejoignez-nous dans notre mission pour un développement durable en Afrique.
+                    </p>
+                </div>
+                <div class="col-span-3">
+                    <h2 class="text-3xl font-medium">Representants</h2>
+                    <ul class="mt-6">
+                        <li class="my-4">
+                            <a href="#">Développement durable</a>
+                        </li>
+                        <li class="my-4">
+                            <a href="#">Développement durable</a>
+                        </li>
+                        <li class="my-4">
+                            <a href="#">Développement durable</a>
+                        </li>
+                        <li class="my-4">
+                            <a href="#">Développement durable</a>
+                        </li>
+                        <li class="my-4">
+                            <a href="#">Développement durable</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-span-2">
+                    <h2 class="text-3xl font-medium">Representants</h2>
+                    <ul class="mt-6">
+                        <li class="my-4">
+                            <a href="#">Développement durable</a>
+                        </li>
+                        <li class="my-4">
+                            <a href="#">Développement durable</a>
+                        </li>
+                        <li class="my-4">
+                            <a href="#">Développement durable</a>
+                        </li>
+                        <li class="my-4">
+                            <a href="#">Développement durable</a>
+                        </li>
+                        <li class="my-4">
+                            <a href="#">Développement durable</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-span-3 pl-8">
+                    <h2 class="text-3xl font-medium">Remerciements</h2>
+                    <p class="mt-6">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat iure, mollitia illum quis at, dolorem facilis aspernatur impedit nesciunt ad itaque earum. Dolorum est eligendi quas facilis beatae, corporis quis.
+                    </p>
+                    <div class="mt-8">
+                        <a href="#" class="bg-secondary text-primary py-3 px-5 hover:text-white transition-colors duration-500">
+                            En savoir plus
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <p class="text-center">Copyright &copy; ONG DEDA by Seme Sonia</p>
+        </div>
+    </footer>
+</body>
+</html>
